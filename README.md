@@ -32,7 +32,7 @@ It covers five failure modes specific to clinical and research code:
 
 ## Why Now
 
-In January 2026, Anthropic launched Claude for Healthcare — purpose-built AI for providers, payers, and researchers, with HIPAA-ready infrastructure and connections to PubMed, ICD-10, and CMS databases.
+In January 2026, Anthropic launched [Claude for Healthcare](https://www.anthropic.com/news/healthcare-life-sciences) — purpose-built AI for providers, payers, and researchers, with HIPAA-ready infrastructure and connections to PubMed, ICD-10, and CMS databases.
 
 The engine is here. The guidelines for building on top of it responsibly in research and clinical contexts are not. This repo is that gap.
 
@@ -69,7 +69,7 @@ The failure modes documented here were observed directly.
 
 ## Relation to Karpathy Guidelines
 
-Andrej Karpathy's observations on LLM coding pitfalls — and the CLAUDE.md derived from them — address the general case well.
+[Andrej Karpathy's observations on LLM coding pitfalls](https://github.com/forrestchang/andrej-karpathy-skills) — and the CLAUDE.md derived from them — address the general case well.
 
 This repo addresses what happens when the general case is not enough. Clinical and research environments have failure modes that do not exist in product engineering. The cost of a wrong assumption is not a bug report — it is a protocol deviation.
 

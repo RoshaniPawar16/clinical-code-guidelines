@@ -79,4 +79,4 @@ These guidelines are working if:
 
 ---
 
-Inspired by Andrej Karpathy's observations on LLM coding pitfalls and Anthropic's Claude for Healthcare. Merge with project-specific instructions as needed.
+Inspired by Andrej Karpathy's observations on LLM coding pitfalls and Anthropic's Claude for Healthcare.

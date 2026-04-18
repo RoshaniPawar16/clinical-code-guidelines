@@ -163,7 +163,7 @@ df = pd.read_csv(INPUT_PATH)
 initial_count = len(df)
 print(f"Loaded {initial_count} records from {INPUT_PATH}")
 
-# Drop missing values — log count and proportion
+# missing values in clinical data may indicate withdrawn consent or a data entry failure — log before discarding
 missing_mask = df.isnull().any(axis=1)
 missing_count = missing_mask.sum()
 df = df[~missing_mask]
@@ -225,11 +225,11 @@ model.fit(X_train, y_train)
 predicted_proba = model.predict_proba(X_test)[0]
 predicted_class = model.classes_[np.argmax(predicted_proba)]
 
-# Bootstrap confidence interval
+# point estimate alone is not sufficient for clinical decision support — CI quantifies how much the estimate would shift on a different patient cohort
 n_bootstraps = 1000
 bootstrap_probas = []
-for _ in range(n_bootstraps):
-    X_boot, y_boot = resample(X_train, y_train, random_state=None)
+for i in range(n_bootstraps):
+    X_boot, y_boot = resample(X_train, y_train, random_state=RANDOM_SEED + i)
     m = LogisticRegression().fit(X_boot, y_boot)
     bootstrap_probas.append(m.predict_proba(X_test)[0][1])
 
@@ -249,13 +249,3 @@ print({
 })
 ```
 
----
-
-## Summary
-
-| Principle | Without guidelines | With guidelines |
-|-----------|-------------------|-----------------|
-| Reproducibility First | No seeds, no logging | Seed everything, log run context |
-| Audit Everything | Silent mutations | Full before/after trail on every change |
-| Surgical Data Handling | Hardcoded paths, silent drops | Environment variables, documented transformations |
-| Communicate Uncertainty | Point estimates only | Confidence intervals and limitations inline |
