@@ -34,7 +34,7 @@ It covers five failure modes specific to clinical and research code:
 
 In January 2026, Anthropic launched [Claude for Healthcare](https://www.anthropic.com/news/healthcare-life-sciences) — purpose-built AI for providers, payers, and researchers, with HIPAA-ready infrastructure and connections to PubMed, ICD-10, and CMS databases.
 
-The engine is here. The guidelines for building on top of it responsibly in research and clinical contexts are not. This repo is that gap.
+The guidelines for building on top of it responsibly in research and clinical contexts are not there. This repo is that gap.
 
 ---
 

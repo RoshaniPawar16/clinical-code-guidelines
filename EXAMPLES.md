@@ -169,7 +169,7 @@ missing_count = missing_mask.sum()
 df = df[~missing_mask]
 print(f"Dropped {missing_count} records with missing values ({missing_count/initial_count:.1%})")
 
-# Age filter — inclusion criterion per protocol section 3.2
+# protocol section 3.2 requires participants to be 18 or older — records below this threshold are out of scope, not errors
 age_mask = df["age"] < 18
 excluded_age = age_mask.sum()
 df = df[~age_mask]
@@ -218,6 +218,8 @@ A clinician sees a prediction with no confidence, no population context, no limi
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.utils import resample
+
+RANDOM_SEED = 42
 
 model = LogisticRegression()
 model.fit(X_train, y_train)
