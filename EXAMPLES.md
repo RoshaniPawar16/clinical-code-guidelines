@@ -231,7 +231,7 @@ predicted_class = model.classes_[np.argmax(predicted_proba)]
 n_bootstraps = 1000
 bootstrap_probas = []
 for i in range(n_bootstraps):
-    X_boot, y_boot = resample(X_train, y_train, random_state=RANDOM_SEED + i)
+    X_boot, y_boot = resample(X_train, y_train, random_state=None)  # random_state=None — bootstrap requires sampling variance across iterations, not reproducibility per draw
     m = LogisticRegression().fit(X_boot, y_boot)
     bootstrap_probas.append(m.predict_proba(X_test)[0][1])
 

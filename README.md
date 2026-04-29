@@ -42,13 +42,13 @@ The guidelines for building on top of it responsibly in research and clinical co
 
 New project:
 ```bash
-curl -o CLAUDE.md https://raw.githubusercontent.com/yourusername/clinical-code-guidelines/main/CLAUDE.md
+curl -o CLAUDE.md https://raw.githubusercontent.com/RoshaniPawar16/clinical-code-guidelines/main/CLAUDE.md
 ```
 
 Existing project:
 ```bash
 echo "" >> CLAUDE.md
-curl https://raw.githubusercontent.com/yourusername/clinical-code-guidelines/main/CLAUDE.md >> CLAUDE.md
+curl https://raw.githubusercontent.com/RoshaniPawar16/clinical-code-guidelines/main/CLAUDE.md >> CLAUDE.md
 ```
 
 Works with Claude Code, Cursor, Copilot, and any AI coding assistant that reads project context files.
