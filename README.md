@@ -51,7 +51,7 @@ echo "" >> CLAUDE.md
 curl https://raw.githubusercontent.com/RoshaniPawar16/clinical-code-guidelines/main/CLAUDE.md >> CLAUDE.md
 ```
 
-Works with Claude Code, Cursor, Copilot, and any AI coding assistant that reads project context files.
+Works with Claude Code and any AI coding assistant that reads project context files. For Cursor, see `.cursor/rules/clinical-guidelines.mdc`.
 
 ---
 
