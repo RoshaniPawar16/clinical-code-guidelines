@@ -8,6 +8,8 @@ Tradeoff: these guidelines bias toward caution over speed. In regulated clinical
 
 ## 1. Reproducibility First
 
+**If it cannot be reproduced, it cannot be trusted.**
+
 Seed every random process. No exceptions.
 
 - Never rely on implicit data ordering. Sort deterministically or document why you cannot.
@@ -20,6 +22,8 @@ In a tokenizer bias study across GPT-2, GPT-3.5, GPT-4, and Claude variants, a 1
 ---
 
 ## 2. Audit Everything
+
+**If it is not logged, it did not happen.**
 
 Log transaction identity across the full lifecycle of every operation, not just errors.
 
@@ -35,6 +39,8 @@ A messaging service handling participant communications across concurrent live t
 
 ## 3. Surgical Data Handling
 
+**Clinical data is not test data. Treat it accordingly.**
+
 Never hardcode file paths, patient identifiers, trial IDs, or credentials.
 
 - Separate data preprocessing from modelling. They are different concerns.
@@ -45,6 +51,8 @@ Never hardcode file paths, patient identifiers, trial IDs, or credentials.
 ---
 
 ## 4. Communicate Uncertainty
+
+**A model output is not a clinical finding.**
 
 A model output is not a clinical finding.
 
@@ -58,6 +66,8 @@ An IVF success rate calculator used globally by fertility clinicians — built o
 ---
 
 ## 5. Think Before Coding
+
+**Do not assume. Do not hide confusion. Surface tradeoffs.**
 
 Do not assume. Do not hide confusion. Surface tradeoffs.
 
