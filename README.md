@@ -69,7 +69,7 @@ The failure modes documented here were observed directly.
 
 ## Relation to Karpathy Guidelines
 
-[Andrej Karpathy's observations on LLM coding pitfalls](https://github.com/forrestchang/andrej-karpathy-skills) — and the CLAUDE.md derived from them — address the general case well.
+[Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876) — and the CLAUDE.md derived from them — address the general case well.
 
 This repo addresses what happens when the general case is not enough. Clinical and research environments have failure modes that do not exist in product engineering. The cost of a wrong assumption is not a bug report — it is a protocol deviation.
 

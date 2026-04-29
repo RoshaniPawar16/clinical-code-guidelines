@@ -54,8 +54,6 @@ Never hardcode file paths, patient identifiers, trial IDs, or credentials.
 
 **A model output is not a clinical finding.**
 
-A model output is not a clinical finding.
-
 - Always surface confidence intervals, not point estimates alone.
 - Document what the model was trained on and where it may not generalise.
 - State limitations inline, not in a separate README.
@@ -68,8 +66,6 @@ An IVF success rate calculator used globally by fertility clinicians — built o
 ## 5. Think Before Coding
 
 **Do not assume. Do not hide confusion. Surface tradeoffs.**
-
-Do not assume. Do not hide confusion. Surface tradeoffs.
 
 - State assumptions explicitly. In research code, wrong assumptions invalidate results, not just functionality.
 - If multiple interpretations exist, present them. Do not pick silently.
