@@ -19,6 +19,8 @@ Seed every random process. No exceptions.
 
 In a tokenizer bias study across GPT-2, GPT-3.5, GPT-4, and Claude variants, a 15-40% degradation in compression efficiency on historical corpora was only detectable because every run was seeded and logged identically. Without that, the finding is noise.
 
+A 2024 review of 511 clinical ML papers found that only 21% shared their code and only 44% reported performance variance — Ciobanu-Caraus et al., Acta Neurochirurgica, 2024.
+
 ---
 
 ## 2. Audit Everything
@@ -34,6 +36,8 @@ Log transaction identity across the full lifecycle of every operation, not just 
 The test: could an MHRA inspector or Research Ethics Committee reconstruct exactly what happened to every record, and when?
 
 A messaging service handling participant communications across concurrent live trials is only inspectable if transaction identity is logged start to finish — from send through to webhook response. That is not optional. It is what makes the trial defensible.
+
+A system built to meet FDA 21 CFR Part 11 needs audit capture at the database level, not just in application code — otherwise direct database access leaves no trace (Jiang & Cao, 2011).
 
 ---
 
@@ -60,6 +64,8 @@ Never hardcode file paths, patient identifiers, trial IDs, or credentials.
 - If a clinician could act on this output without reading the documentation and make an unsafe decision, the uncertainty is not communicated well enough.
 
 An IVF success rate calculator used globally by fertility clinicians — built on registry data from over 100,000 treatment cycles — showed that the difference between a point estimate and a confidence interval changed how clinicians counselled patients. Technically correct is not the same as clinically useful.
+
+A 2021 review of four widely cited medical ML models found that none had a mechanism to abstain when uncertain — they returned a prediction regardless of how far the input was from the training distribution (Kompa et al., npj Digital Medicine, 2021).
 
 ---
 
