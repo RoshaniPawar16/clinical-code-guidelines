@@ -37,7 +37,7 @@ The test: could an MHRA inspector or Research Ethics Committee reconstruct exact
 
 A messaging service handling participant communications across concurrent live trials is only inspectable if transaction identity is logged start to finish — from send through to webhook response. That is not optional. It is what makes the trial defensible.
 
-A system built to meet FDA 21 CFR Part 11 needs audit capture at the database level, not just in application code — otherwise direct database access leaves no trace (Jiang & Cao, 2011).
+A system built to meet US clinical trial data regulations needs audit capture at the database level, not just in application code — otherwise direct database access leaves no trace (Jiang & Cao, 2011).
 
 ---
 

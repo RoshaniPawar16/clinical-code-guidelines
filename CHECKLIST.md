@@ -20,7 +20,7 @@ A 2024 review of 511 clinical ML papers found only 21% shared their code and onl
 - [ ] Audit logging is in place before any business logic runs
 - [ ] An MHRA inspector could reconstruct the full record history from logs alone
 
-Meeting FDA 21 CFR Part 11 requires audit capture at the database level — application-layer logging does not cover direct database access — Jiang & Cao, 2011.
+US clinical trial data regulations require audit capture at the database level — application-layer logging does not cover direct database access — Jiang & Cao, 2011.
 
 ## Data Handling
 

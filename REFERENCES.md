@@ -12,7 +12,7 @@ Supports Principle 1: of 511 clinical ML papers from 2017–2019, only 21% share
 **Design and implementation of an audit trail in compliance with US regulations**
 Jiang K, Cao X. 2011. Clinical Trials.
 https://pubmed.ncbi.nlm.nih.gov/21900341/
-Supports Principle 2: meeting FDA 21 CFR Part 11 requires audit capture at the database level — capturing both data access and changes with the correct user identifier — application-layer logging alone is not sufficient.
+Supports Principle 2: designed to meet US clinical trial data regulations, the system captures both data access and changes at the database level with the correct user identifier — application-layer logging alone does not cover direct database access.
 
 ---
 
