@@ -67,6 +67,17 @@ The failure modes documented here were observed directly.
 
 ---
 
+## How to know it is working
+
+These guidelines are working if:
+- every data transformation is documented and traceable
+- model outputs include uncertainty, not just predictions
+- pipelines reproduce identically across environments
+- audit logs exist before the first line of business logic
+- questions about data provenance and regulatory context come before implementation
+
+---
+
 ## Relation to Karpathy Guidelines
 
 [Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876) — and the CLAUDE.md derived from them — address the general case well.

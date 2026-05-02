@@ -21,6 +21,8 @@ In a tokenizer bias study across GPT-2, GPT-3.5, GPT-4, and Claude variants, a 1
 
 A 2024 review of 511 clinical ML papers found that only 21% shared their code and only 44% reported performance variance — Ciobanu-Caraus et al., Acta Neurochirurgica, 2024.
 
+**The test:** Could a colleague run this pipeline on a different machine tomorrow and get the same result, without asking you anything?
+
 ---
 
 ## 2. Audit Everything
@@ -39,6 +41,8 @@ A messaging service handling participant communications across concurrent live t
 
 A system built to meet US clinical trial data regulations needs audit capture at the database level, not just in application code — otherwise direct database access leaves no trace (Jiang & Cao, 2011).
 
+**The test:** If someone accessed the database directly and changed a value, would your system know it happened?
+
 ---
 
 ## 3. Surgical Data Handling
@@ -51,6 +55,8 @@ Never hardcode file paths, patient identifiers, trial IDs, or credentials.
 - Do not clean data without documenting every decision. In clinical data, what looks like noise may be a signal.
 - Do not change schemas without understanding downstream dependencies. In multi-centre trials, one schema change can break data integrity across sites.
 - If something unexpected appears in the data, stop and surface it. Do not work around it silently.
+
+**The test:** Could you explain every dropped row and every transformation in this pipeline to a trial coordinator who will be asked about it at an audit?
 
 ---
 
@@ -67,6 +73,8 @@ An IVF success rate calculator used globally by fertility clinicians — built o
 
 A 2021 review of four widely cited medical ML models found that none had a mechanism to abstain when uncertain — they returned a prediction regardless of how far the input was from the training distribution (Kompa et al., npj Digital Medicine, 2021).
 
+**The test:** Does this model ever say it does not know — or does it return a prediction for every input, no matter how far that input is from anything it was trained on?
+
 ---
 
 ## 5. Think Before Coding
@@ -79,6 +87,8 @@ A 2021 review of four widely cited medical ML models found that none had a mecha
 - Push back when a simpler approach exists.
 
 The cost of a wrong assumption in a consumer app is a bug report. The cost of a wrong assumption in a clinical trial data management system is a protocol deviation.
+
+**The test:** List every assumption you made about the data before writing this code — if any one of them is wrong, what breaks?
 
 ---
 
