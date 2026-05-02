@@ -1,0 +1,14 @@
+{
+  "name": "clinical-code-guidelines",
+  "version": "1.0.0",
+  "description": "Guidelines for AI coding assistants working on clinical and research software.",
+  "author": {
+    "name": "Roshani Pawar",
+    "url": "https://github.com/RoshaniPawar16"
+  },
+  "homepage": "https://github.com/RoshaniPawar16/clinical-code-guidelines",
+  "repository": "https://github.com/RoshaniPawar16/clinical-code-guidelines",
+  "license": "MIT",
+  "keywords": ["healthcare", "clinical", "research", "reproducibility", "claude-md"],
+  "skills": "./skills/"
+}

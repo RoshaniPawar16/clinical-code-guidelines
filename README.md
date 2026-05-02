@@ -40,6 +40,20 @@ The guidelines for building on top of it responsibly in research and clinical co
 
 ## Install
 
+**Option A: Claude Code Plugin (recommended)**
+```
+/plugin marketplace add RoshaniPawar16/clinical-code-guidelines
+```
+
+Then install:
+```
+/plugin install clinical-code-guidelines
+```
+
+This installs the guidelines globally across all your projects.
+
+**Option B: Per-project**
+
 New project:
 ```bash
 curl -o CLAUDE.md https://raw.githubusercontent.com/RoshaniPawar16/clinical-code-guidelines/main/CLAUDE.md
@@ -79,6 +93,21 @@ These guidelines are working if:
 ---
 
 ## Relation to Karpathy Guidelines
+
+Karpathy's post on January 26, 2026 described what he was seeing:
+
+> "The models make wrong assumptions on your behalf and just run along
+> with them without checking. They don't manage their confusion, don't
+> seek clarifications, don't surface inconsistencies, don't present
+> tradeoffs, don't push back when they should."
+
+> "LLMs are exceptionally good at looping until they meet specific
+> goals... Don't tell it what to do, give it success criteria and
+> watch it go."
+
+Those observations are about general coding. This repo is about what
+happens when the code touches a patient record, a trial database, or
+a clinical decision tool.
 
 [Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876) — and the CLAUDE.md derived from them — address the general case well.
 
