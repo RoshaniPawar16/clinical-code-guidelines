@@ -16,8 +16,6 @@ The tools have improved. The guidelines for using them in regulated environments
 
 A `CLAUDE.md` file — and supporting examples — that gives AI coding assistants the context they are missing when working on clinical and research software.
 
-Drop it in your project. Your AI assistant reads it automatically and applies it to everything it writes.
-
 It covers five failure modes specific to clinical and research code:
 
 | Principle | The failure it prevents |
@@ -28,13 +26,7 @@ It covers five failure modes specific to clinical and research code:
 | Communicate Uncertainty | Point estimates presented as clinical findings |
 | Think Before Coding | Wrong assumptions that invalidate results, not just functionality |
 
----
-
-## Why Now
-
-In January 2026, Anthropic launched [Claude for Healthcare](https://www.anthropic.com/news/healthcare-life-sciences) — purpose-built AI for providers, payers, and researchers, with HIPAA-ready infrastructure and connections to PubMed, ICD-10, and CMS databases.
-
-The guidelines for building on top of it responsibly in research and clinical contexts are not there. This repo is that gap.
+In January 2026, Anthropic launched [Claude for Healthcare](https://www.anthropic.com/news/healthcare-life-sciences) — guidelines for using it responsibly in research and clinical code are what this repo provides.
 
 ---
 
@@ -81,6 +73,22 @@ The failure modes documented here were observed directly.
 
 ---
 
+## What is in this repo
+
+Each file has a specific job.
+
+* CLAUDE.md — the guidelines themselves. Drop this in any project and your AI assistant applies them automatically.
+* EXAMPLES.md — before and after Python code showing what AI generates by default and what it should generate instead.
+* CHECKLIST.md — a pre-commit checklist. Answer every question before pushing. If any answer is no, fix it first.
+* CONTRIBUTING.md — how to add a new failure mode. The bar is simple: it must trace to something observed directly, not hypothesised.
+* REFERENCES.md — four peer-reviewed papers that support the principles. Each one is cited in the relevant section of CLAUDE.md.
+* CURSOR.md — setup instructions for using the guidelines in Cursor.
+* .cursor/rules/clinical-guidelines.mdc — the Cursor rule file. Applied automatically to clinical and research file patterns.
+* .claude-plugin/ — the Claude Code plugin manifest. Enables global install via the plugin marketplace.
+* skills/clinical-guidelines/SKILL.md — the skill definition used by the Claude Code plugin.
+
+---
+
 ## How to know it is working
 
 These guidelines are working if:
@@ -110,8 +118,6 @@ happens when the code touches a patient record, a trial database, or
 a clinical decision tool.
 
 [Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876) — and the CLAUDE.md derived from them — address the general case well.
-
-This repo addresses what happens when the general case is not enough. Clinical and research environments have failure modes that do not exist in product engineering. The cost of a wrong assumption is not a bug report — it is a protocol deviation.
 
 ---
 
