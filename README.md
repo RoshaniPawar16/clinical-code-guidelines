@@ -119,6 +119,8 @@ a clinical decision tool.
 
 [Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876) — and the CLAUDE.md derived from them — address the general case well.
 
+The cost of a wrong assumption is not a bug report — it is a protocol deviation.
+
 ---
 
 ## Customisation
